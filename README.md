@@ -1,4 +1,4 @@
-##############################################################################Sourcecode:##############################################################
+################################################################Sourcecode:##############################################################
 
 import pandas as pd
 import sys
@@ -49,13 +49,12 @@ class Convert_ExcelSheet_To_MySqlTable:
                       print("########################################################")
             root.mainloop() 
 
-#########################Instructions you need to followcarefully#####################################################################################
+#######################Instructions you need to followcarefully##############################
 
 
 from excelsheet_to_mysqldatabasetable.excel_converter import Convert_ExcelSheet_To_MySqlTable
 
 
-#Enter your mysql database table fields in a tuple in single quotes only '' :Note you must use only single quotes in a tuple  of your fields.
 excel_file_path=open(r"C:\Users\LAMECK\Desktop\Excel Converter\documentation\db4.xlsx","rb")
 
 #Enter your table name and the columns you have in your mysql table .Note the columns in the excel sheet and mysql table should be in the same order.
@@ -66,3 +65,6 @@ sql=" INSERT INTO db4(serialnumber,entrynumber,volumenumber,district,year,user,h
 
 convert=Convert_ExcelSheet_To_MySqlTable(username="root",password="tangimeko7583",hostname="localhost",excel_file=excel_file_path,database_name="db4",number_of_columns=7,sql=sql)
 convert.Convert_to_MySqlDatabaseTable()
+
+
+found at ( https://pypi.org/project/excelsheet-to-mysqldatabasetable/2.4.0/ )
